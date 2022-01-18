@@ -1,0 +1,70 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #11101D;
+}
+.registration-page{
+    background: white;
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+}
+.form-header{
+    text-align: center;
+}
+.registration-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+}
+
+label,input,select,textarea{
+    display: block;
+}
+input[type="text"],input[type="date"],select,textarea{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+input[type="text"]:hover,input[type="date"]:hover,select:hover,textarea:hover{
+    /* border: 1px solid darkblue; */
+    transition: border .5s;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+input[type="submit"]{
+    margin: auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background: #11101D;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+::placeholder,select,input[type=date]{
+    padding-left: 10px;
+    opacity: .7;
+}
+input[type="submit"]:hover{
+    background: #11101dcb;
+    transition: background 1s;
+}
+.required-field::before{
+    content: "*";
+    color: red;
+  }
+.required-field-disabled::before{
+    visibility: hidden;
+    content: "*";
+    color: red;
+}
